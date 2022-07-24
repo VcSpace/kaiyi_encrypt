@@ -3,6 +3,7 @@ function jsstart(m_json, m_time) {
    return t
 }
 
+
 class Pt {
     static create(...e) {
         return new this(...e)
@@ -817,9 +818,10 @@ class Hw extends Mw {
 Hw.keySize = 256 / 32;
 const uT = Mw._createHelper(Hw)
   , fT = (t,e)=>{
-    const
-      o = ["f", 7, 7, 8, "b", "0", "2", 7, "c", "0", 8, "a", "6", "c", String(10086).length + 3]
-      , r = ["Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1", "f778b027c08a6c8"]
-    return t = "dcoding://" + uT.encrypt(JSON.stringify(t), "f2741610a30040c7a" + r[1] + ":" + e).toString(),
+    const n = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+      , o = ["f", 7, 7, 8, "b", "0", "2", 7, "c", "0", 8, "a", "6", "c", String(10086).length + 3]
+      , r = [n, o.join("")];
+    return t = "dcoding://" + uT.encrypt(t, "f2741610a30040c7a" + r[1] + ":" + e).toString(),
     t
 }
+;
