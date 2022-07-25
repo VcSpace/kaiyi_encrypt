@@ -825,3 +825,11 @@ const uT = Mw._createHelper(Hw)
     t
 }
 ;
+// const uT = Mw._createHelper(Hw)
+//   , fT = (t,e)=>{
+//     const n = navigator.userAgent || "chrome"
+//       , o = ["f", 7, 7, 8, "b", "0", "2", 7, "c", "0", 8, "a", "6", "c", String(10086).length + 3]
+//       , r = [n, o.join("")];
+//     return t = "dcoding://" + uT.encrypt(JSON.stringify(t), "f2741610a30040c7a" + r[1] + ":" + e).toString(),
+//     t
+// }
