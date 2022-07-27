@@ -25,6 +25,10 @@ class KaiYi(object):
         self.price_list['农田'] = 100
         self.mark_list['豹1'] = '3a14d5cc-dab7-4338-b2ea-3b56cacccfe4'
         self.price_list['豹1'] = 1000
+        self.mark_list['平1'] = '7bd57e94-8910-4723-8e33-2943fb480867'
+        self.price_list['平1'] = 10000
+        self.mark_list['平2'] = '4aa81d90-b4d9-4447-8940-ac8147275bdd'
+        self.price_list['平2'] = 2000
 
 
     def dcoding(self, m_json, m_time):
@@ -205,11 +209,11 @@ class KaiYi(object):
     def seckill_low(self, m_pro):
         mark_url = 'https://m.kaione-sh.cn/dapi/ccode/run?papp_slug=kaiyi&action=productitem_web.list&pagetemplate_id=107914&dataset_id=391838'
         print('等待alt+r')
-        keyboard.wait('alt+r')
+        # keyboard.wait('alt+r')
         print('alt+r')
         time.sleep(2)
 
-        for ll in range(11):
+        while True:
             print('抄底中----{0}'.format(m_pro))
             m_time = current_milli_time()
             dc_json = '{"is_admin":false,"pagetemplate_id":107914,"dataset_id":391838,"action":"productitem_web.list","kwargs":{"limit":10,"offset":0,"filters":{"data__name__icontains":null,"data__category_uuid":"%s"},"order_by":["data__saleprice__int"]}}' % self.mark_list[m_pro]
@@ -240,7 +244,7 @@ class KaiYi(object):
                             self.create_order(t_uuid)
                             time.sleep(0.5)
                             return
-                time.sleep(0.3)
+                time.sleep(5)
             except Exception as e:
                 print(e)
 

@@ -1,6 +1,7 @@
 import execjs
 import time
 import os
+import threading
 
 from kai import Ky
 
@@ -23,8 +24,14 @@ function jsstart(m_json, m_time) {
 if __name__ == '__main__':
     #农田抄底
     Ky.login()
-    m_pro = input('输入检测商品')
-    while True:
-        Ky.seckill_low(m_pro)
+
+
+    t1 = threading.Thread(target=Ky.seckill_low, args=('平1',))
+    t2 = threading.Thread(target=Ky.seckill_low, args=('平2',))
+    # Ky.seckill_low(m_pro)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
 
 
