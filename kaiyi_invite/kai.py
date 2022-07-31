@@ -117,7 +117,7 @@ class KaiYi(object):
 
 
     def invite(self):
-        for ll in range(10):
+        for ll in range(1):
             ip= self.get_ip()
             print(ip)
             self.proxies = {
